@@ -88,6 +88,6 @@ function startCountdown(duration){
 }
 
 // chạy sau khi load
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function(){
   startCountdown(2 * 60 * 60); // 2 tiếng
-};
+});
