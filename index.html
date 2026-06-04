@@ -5,145 +5,82 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Inox Cường Đặng | Tủ âm tường - Nắp bể inox 304</title>
-<meta name="description" content="Chuyên gia công tủ âm tường, nắp bể inox 304 tại Thanh Hóa. Giá tận xưởng, thi công nhanh. Hotline 0967721996">
+<title>Inox Cường Đặng</title>
 
 <style>
-body{margin:0;font-family:sans-serif;background:#f5f5f5}
+body{
+margin:0;
+font-family:sans-serif;
+background:#f5f5f5;
+}
 
 /* HEADER */
-header{background:#111;color:#fff;padding:12px;text-align:center}
-nav{display:flex;justify-content:center;gap:15px;background:#222;padding:10px;flex-wrap:wrap}
-nav button{
-background:#444;color:#fff;border:none;padding:8px 12px;cursor:pointer;border-radius:5px
-}
-nav button:hover{background:red}
-
-/* PRODUCTS */
-.container{padding:15px}
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+.header{
+background:#0b5ed7;
+color:#fff;
 }
 
-.product{
-background:#fff;
-padding:10px;
-border-radius:8px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-text-align:center;
-transition:0.3s;
+.header .top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 20px;
 }
-.product:hover{transform:translateY(-5px)}
 
-.product img{
-width:100%;
-height:180px;
-object-fit:cover;
+.header input{
+padding:8px;
+width:250px;
+border:none;
 border-radius:5px;
 }
 
-.product h3{margin:10px 0;font-size:16px}
-.product p{color:#e60000;font-weight:bold}
-
-.product button{
-background:red;color:#fff;border:none;padding:10px;width:100%;cursor:pointer;border-radius:5px
+nav{
+display:flex;
+gap:20px;
+background:#084298;
+padding:10px;
+justify-content:center;
 }
 
-/* FOOTER */
-footer{
-background:#111;color:#fff;padding:20px;text-align:center;margin-top:20px
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
 }
 
-/* FLOAT */
-.float{
-position:fixed;right:15px;bottom:15px;display:flex;flex-direction:column;gap:10px;
+/* TEST SECTION */
+.test{
+padding:30px;
+text-align:center;
 }
-.float a{
-padding:12px;border-radius:50%;color:#fff;text-decoration:none;text-align:center;
-}
-.call{background:red}
-.zalo{background:#0084ff}
 </style>
 
 </head>
 
 <body>
 
-<header>
-<h2>INOX CƯỜNG ĐẶNG</h2>
+<!-- HEADER -->
+
+<header class="header">
+  <div class="top">
+    <h2>INOX CƯỜNG ĐẶNG</h2>
+    <input type="text" placeholder="Tìm sản phẩm...">
+  </div>
+
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Sản phẩm</a>
+    <a href="#">Giới thiệu</a>
+    <a href="#">Liên hệ</a>
+  </nav>
 </header>
 
-<!-- MENU LỌC -->
+<!-- TEST (để kiểm tra không bị trắng) -->
 
-<nav>
-<button onclick="filter('all')">Tất cả</button>
-<button onclick="filter('tu')">Tủ âm tường</button>
-<button onclick="filter('nap')">Nắp bể</button>
-<button onclick="filter('hoc')">Hộc âm</button>
-</nav>
-
-<!-- SẢN PHẨM HIỆN NGAY -->
-
-<div class="container">
-<div class="products" id="list"></div>
+<div class="test">
+  <h1>Web đã chạy 🚀</h1>
+  <p>Tiếp theo sẽ thêm slider + sản phẩm</p>
 </div>
-
-<!-- SEO ẨN (Google đọc) -->
-
-<div style="padding:15px;background:#fff">
-<h1>Gia công inox Thanh Hóa</h1>
-<p>Chuyên tủ âm tường, nắp bể inox 304, thi công tận nơi, giá tốt.</p>
-</div>
-
-<footer>
-<p>Hotline: 0967 721 996</p>
-<p>Địa chỉ: Thanh Hóa</p>
-
-<iframe 
-src="https://www.google.com/maps?q=thanh%20hoa&output=embed"
-width="100%" height="200" style="border:0;"></iframe>
-</footer>
-
-<!-- FLOAT -->
-
-<div class="float">
-<a href="tel:0967721996" class="call">📞</a>
-<a href="https://zalo.me/0967721996" class="zalo">Z</a>
-</div>
-
-<script>
-const data=[
-{type:'tu',name:'Tủ âm tường inox',price:'Liên hệ',img:'https://images.unsplash.com/photo-1581578731548-c64695cc6952'},
-{type:'nap',name:'Nắp bể inox 304',price:'Liên hệ',img:'https://images.unsplash.com/photo-1560185127-6ed189bf02f4'},
-{type:'hoc',name:'Hộc âm tường',price:'Liên hệ',img:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c'},
-{type:'tu',name:'Tủ inox cao cấp',price:'Liên hệ',img:'https://images.unsplash.com/photo-1507089947367-19c1da9775ae'}
-];
-
-function render(list){
-const html=list.map(p=>`
-<div class="product">
-<img src="${p.img}">
-<h3>${p.name}</h3>
-<p>${p.price}</p>
-<button onclick="call()">Gọi ngay</button>
-</div>
-`).join('');
-document.getElementById('list').innerHTML=html;
-}
-
-function filter(type){
-if(type==='all') return render(data);
-render(data.filter(p=>p.type===type));
-}
-
-function call(){
-window.location.href="tel:0967721996";
-}
-
-render(data);
-</script>
 
 </body>
 </html>
