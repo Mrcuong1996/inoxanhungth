@@ -1,86 +1,61 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Inox Cường Đặng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Inox Cường Đặng</title>
+  <!-- SEO -->
+  <meta name="description" content="Gia công inox theo yêu cầu, tủ inox, bể nước ngầm, nắp bể inox 304 chất lượng cao">
+  <meta name="keywords" content="inox 304, gia công inox, tủ inox, bể nước ngầm">
 
-<style>
-body{
-margin:0;
-font-family:sans-serif;
-background:#f5f5f5;
-}
-
-/* HEADER */
-.header{
-background:#0b5ed7;
-color:#fff;
-}
-
-.header .top{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 20px;
-}
-
-.header input{
-padding:8px;
-width:250px;
-border:none;
-border-radius:5px;
-}
-
-nav{
-display:flex;
-gap:20px;
-background:#084298;
-padding:10px;
-justify-content:center;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-font-size:14px;
-}
-
-/* TEST SECTION */
-.test{
-padding:30px;
-text-align:center;
-}
-</style>
-
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- HEADER -->
-
 <header class="header">
-  <div class="top">
-    <h2>INOX CƯỜNG ĐẶNG</h2>
-    <input type="text" placeholder="Tìm sản phẩm...">
-  </div>
-
-  <nav>
-    <a href="#">Trang chủ</a>
-    <a href="#">Sản phẩm</a>
-    <a href="#">Giới thiệu</a>
-    <a href="#">Liên hệ</a>
-  </nav>
+  <div class="logo">INOX CƯỜNG ĐẶNG</div>
+  <input type="text" placeholder="Tìm sản phẩm..." class="search">
+  <div class="hotline">📞 0967 721 996</div>
 </header>
 
-<!-- TEST (để kiểm tra không bị trắng) -->
+<!-- MENU -->
+<nav class="menu">
+  <a href="#">Trang chủ</a>
+  <a href="#">Tủ inox</a>
+  <a href="#">Nắp bể</a>
+  <a href="#">Gia công</a>
+  <a href="#">Liên hệ</a>
+</nav>
 
-<div class="test">
-  <h1>Web đã chạy 🚀</h1>
-  <p>Tiếp theo sẽ thêm slider + sản phẩm</p>
-</div>
+<!-- BANNER -->
+<section class="banner">
+  <div class="banner-text">
+    <h1>GIA CÔNG INOX THEO YÊU CẦU</h1>
+    <p>Chuẩn 304 - Bền đẹp - Giá xưởng</p>
+    <button>Liên hệ ngay</button>
+  </div>
+</section>
+
+<!-- SALE -->
+<section class="sale">
+  <h2>🔥 SẢN PHẨM NỔI BẬT</h2>
+  <div class="countdown">Kết thúc sau: 02 : 12 : 30</div>
+</section>
+
+<!-- PRODUCT -->
+<section class="products" id="product-list"></section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Inox Cường Đặng</p>
+  <p>Địa chỉ: Hà Nội</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
