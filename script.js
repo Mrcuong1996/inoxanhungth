@@ -50,59 +50,6 @@ searchInput.addEventListener("input", function(){
 // load ban đầu
 render(products);
 
-// mobile
-@media(max-width:768px){
-
-/* HEADER */
-.header{
-  flex-direction:column;
-  gap:10px;
-}
-
-.search{
-  width:100%;
-}
-
-/* MENU */
-.menu{
-  display:flex;
-  overflow-x:auto;
-  white-space:nowrap;
-}
-
-.menu a{
-  margin:0 10px;
-  font-size:14px;
-}
-
-/* BANNER */
-.banner{
-  padding:30px 15px;
-}
-
-.banner h1{
-  font-size:22px;
-}
-
-/* PRODUCTS */
-.products{
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-  padding:10px;
-}
-
-.product img{
-  height:140px;
-}
-
-/* BUTTON */
-.product button{
-  font-size:13px;
-  padding:6px;
-}
-
-}
-
 const slides = [
   "https://via.placeholder.com/1200x400?text=INOX+CAO+CAP",
   "https://via.placeholder.com/1200x400?text=GIA+CONG+THEO+YEU+CAU",
