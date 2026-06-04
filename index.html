@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inox Cường Đặng</title>
+
+<style>
+body{margin:0;font-family:sans-serif;background:#f5f5f5}
+header{background:#111;color:#fff;padding:15px;text-align:center}
+nav{display:flex;justify-content:center;gap:20px;background:#222;padding:10px}
+nav a{color:#fff;text-decoration:none}
+.banner{background:url('https://images.unsplash.com/photo-1581090700227-1e8c7d2a9b6b') center/cover;height:250px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;font-weight:bold}
+
+.container{padding:20px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.product{background:#fff;padding:10px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1);text-align:center}
+.product img{width:100%;height:180px;object-fit:cover;border-radius:5px}
+.product h3{margin:10px 0}
+.product button{background:red;color:#fff;border:none;padding:10px;width:100%;cursor:pointer}
+
+footer{background:#111;color:#fff;padding:20px;text-align:center;margin-top:30px}
+
+.float{
+position:fixed;
+right:15px;
+bottom:15px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.float a{
+padding:12px;
+color:#fff;
+border-radius:50%;
+text-align:center;
+font-size:18px;
+text-decoration:none;
+}
+
+.call{background:red}
+.zalo{background:#0084ff}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>INox Cường Đặng</h1>
+<p>Gia công & thi công inox chuyên nghiệp</p>
+</header>
+
+<nav>
+<a href="#">Trang chủ</a>
+<a href="#sp">Sản phẩm</a>
+<a href="#lh">Liên hệ</a>
+</nav>
+
+<div class="banner">
+Thi công inox - Giá tận xưởng
+</div>
+
+<div class="container" id="sp">
+<h2>Sản phẩm nổi bật</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+<h3>Tủ âm tường inox</h3>
+<p>Giá: Liên hệ</p>
+<button onclick="call()">Gọi ngay</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4">
+<h3>Nắp bể inox 304</h3>
+<p>Giá: Liên hệ</p>
+<button onclick="call()">Gọi ngay</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<h3>Hộc âm tường</h3>
+<p>Giá: Liên hệ</p>
+<button onclick="call()">Gọi ngay</button>
+</div>
+
+</div>
+</div>
+
+<footer id="lh">
+<h3>Liên hệ</h3>
+<p>Hotline: 0967 721 996</p>
+<p>Địa chỉ: Thanh Hóa</p>
+
+<iframe 
+src="https://www.google.com/maps?q=thanh%20hoa&output=embed"
+width="100%" height="200" style="border:0;"></iframe>
+
+</footer>
+
+<div class="float">
+<a href="tel:0967721996" class="call">📞</a>
+<a href="https://zalo.me/0967721996" class="zalo">Z</a>
+</div>
+
+<script>
+function call(){
+window.location.href="tel:0967721996"
+}
+</script>
+
+</body>
+</html>
