@@ -116,3 +116,30 @@ setInterval(()=>{
   if(current >= slides.length) current = 0;
   document.getElementById("slide-img").src = slides[current];
 },3000);
+
+function callNow(){
+  window.location.href = "tel:0967721996";
+}
+
+<button onclick="callNow()">Liên hệ</button>
+
+function startCountdown(duration){
+  let timer = duration;
+
+  setInterval(()=>{
+    let hours = Math.floor(timer / 3600);
+    let minutes = Math.floor((timer % 3600) / 60);
+    let seconds = timer % 60;
+
+    document.getElementById("countdown").innerHTML =
+      `${hours} : ${minutes} : ${seconds}`;
+
+    timer--;
+
+    if(timer < 0){
+      timer = duration;
+    }
+  },1000);
+}
+
+startCountdown(3 * 60 * 60); // 3 tiếng
