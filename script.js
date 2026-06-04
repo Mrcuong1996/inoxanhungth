@@ -102,3 +102,17 @@ render(products);
 }
 
 }
+
+const slides = [
+  "https://via.placeholder.com/1200x400?text=INOX+CAO+CAP",
+  "https://via.placeholder.com/1200x400?text=GIA+CONG+THEO+YEU+CAU",
+  "https://via.placeholder.com/1200x400?text=BAO+GIA+NHANH"
+];
+
+let current = 0;
+
+setInterval(()=>{
+  current++;
+  if(current >= slides.length) current = 0;
+  document.getElementById("slide-img").src = slides[current];
+},3000);
