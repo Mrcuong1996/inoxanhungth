@@ -111,35 +111,36 @@ const slides = [
 
 let current = 0;
 
-setInterval(()=>{
-  current++;
-  if(current >= slides.length) current = 0;
-  document.getElementById("slide-img").src = slides[current];
-},3000);
-
-function callNow(){
-  window.location.href = "tel:0967721996";
-}
-
-<button onclick="callNow()">Liên hệ</button>
-
 function startCountdown(duration){
   let timer = duration;
 
-  setInterval(()=>{
-    let hours = Math.floor(timer / 3600);
-    let minutes = Math.floor((timer % 3600) / 60);
-    let seconds = timer % 60;
+  setInterval(function(){
 
-    document.getElementById("countdown").innerHTML =
-      `${hours} : ${minutes} : ${seconds}`;
+    let h = Math.floor(timer / 3600);
+    let m = Math.floor((timer % 3600) / 60);
+    let s = timer % 60;
+
+    // format 2 số
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    const el = document.getElementById("countdown");
+
+    if(el){
+      el.innerHTML = `${h} : ${m} : ${s}`;
+    }
 
     timer--;
 
     if(timer < 0){
       timer = duration;
     }
+
   },1000);
 }
 
-startCountdown(3 * 60 * 60); // 3 tiếng
+// chạy sau khi load
+window.onload = function(){
+  startCountdown(2 * 60 * 60); // 2 tiếng
+};
